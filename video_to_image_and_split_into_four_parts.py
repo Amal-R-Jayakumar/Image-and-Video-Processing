@@ -1,3 +1,19 @@
+'''video_to_image_and_split_into_four_parts program captures image from webcam and cuts it into four equal parts. 
+The VideoCapture object is named video. 
+The webcam port can be changed according to the need by changing the value of "web_cam_port" in line 54 to -1 or 1 for default webcam. 
+it is usually 0 When the object "video" recieves input, the value of "video.isOpened()" becomes TRUE. 
+Here "frame" is the video matrix in the while loop. 
+When the webcam feed is opened, the user can choose to quit by pressing 'q' or the 'ESC' key. 
+This will delete the video matrix and the program will be terminated. 
+If the user wants to capture image, press 'SPACE' or 's' Key. 
+This action will capture the image. The image is saved as 'Capture.png'. 
+Then the function to crop images will take over and save and display 4 individual images. 
+The images are created by taking 'Capture.png' into a matrix named'image'. 
+'Height' and 'Width' of the capture is read and a new matrix named 'crop' is created each time changing the dimensions. 
+The cropped images will be displayed. Then press 'q' or 'ESC' to close the windows.'''
+
+
+
 import cv2
 def crop_image_into_four(image_file):   
     image = cv2.imread(image_file)
