@@ -1,0 +1,1 @@
+print([(i,i**3) for i in list(map(int,input("list = ").replace("[",'').replace(",",' ').replace("]",'').strip().split()))])
